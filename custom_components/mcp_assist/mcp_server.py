@@ -1574,9 +1574,9 @@ class MCPServer:
                     }
                 ]
             }
-
-        # Reverse to get most recent first, apply limit
-        recent_states = list(reversed(entity_states[-limit:]))
+        
+        # Apply limit
+        recent_states = entity_states[:limit]
 
         # Build formatted text
         text_parts = [
